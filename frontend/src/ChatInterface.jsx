@@ -6,6 +6,8 @@ import SettingsModal from './SettingsModal';
 import { ToastContainer } from './components/Toast';
 import MarkdownMessage from './components/MarkdownMessage';
 
+import { API_BASE_URL } from './config';
+
 function ChatInterface() {
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState('');
@@ -25,7 +27,7 @@ function ChatInterface() {
     const [settings, setSettings] = useState({
         userName: 'User',
         userId: 'anonymous',
-        backendUrl: 'http://localhost:8000',
+        backendUrl: API_BASE_URL,
         fontSize: 'medium',
         useSupabase: false,
     });

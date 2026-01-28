@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { API_BASE_URL } from './config';
 import { X, User, Server, Palette, Database, Trash2, Download, Upload, CheckCircle, XCircle, Mail } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import RecipientManager from './components/RecipientManager';
@@ -222,7 +223,7 @@ function SettingsModal({ isOpen, onClose, settings, onUpdateSettings, onClearAll
                                         className="w-full px-4 py-2 bg-gpt-input border border-gpt-border rounded-lg 
                                                  text-gpt-text placeholder-gpt-textMuted focus:border-gpt-accent 
                                                  focus:ring-1 focus:ring-gpt-accent outline-none transition-colors"
-                                        placeholder="http://localhost:8000"
+                                        placeholder={API_BASE_URL}
                                     />
                                     <p className="text-xs text-gpt-textMuted mt-2">
                                         URL of your email agent backend server.
